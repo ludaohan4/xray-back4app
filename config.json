@@ -1,0 +1,19 @@
+{
+  "log": {"loglevel": "warning"},
+  "inbounds": [
+    {
+      "port": 8080,
+      "listen": "0.0.0.0",
+      "protocol": "vless",
+      "settings": {
+        "clients": [{"id": "9d4e7a1c-2f68-4b93-a7e5-3c8d1f6a9b42"}],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {"path": "/xray-vless"}
+      }
+    }
+  ],
+  "outbounds": [{"protocol": "freedom"}, {"protocol": "blackhole", "tag": "blocked"}]
+}
